@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/Estilos.css"> <!--se manda llamar hoja de estilos -->
+</head>
+<body>
+
+    
+
+    <div class="row justify-content-md-start">
+        <div class="col-md">
+            <div class="card">
+                <div class="card-header text-center">
+                    Bienvenidos
+                </div>
+                <div class="card-body">
+                    @if (Session["FullName"] != null)
+                    {
+                        <p>Nombre: @Session["FullName"].ToString()</p>
+                        <p>Email: @Session["Email"].ToString()</p>
+                        <a href="@Url.Action("Logout","Home")" class="btn btn-warning">Cerrar sesion</a>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <header class="header">
+        <! -- barra de navegacion -->
+
+        <h1 class="titulo text-center my-4">Villa<span>Hogar</span></h1>
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" Edwardian Script ITC ="NavegacionPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav-principal" class="collapse navbar-collapse">
+                <nav class="navegacion-principal nav justify-content-between container flex-column flex-lg-row text-center font-weight-bold font-family-Edwardian Script ITC" >
+                    <a href="#Servicio" class="nav-link">Servicio</a>
+                    <a href="#quienessomos" class="nav-link">Quiénes somos</a>
+                    <a href="#nuestras" class="nav-link">Nuestras Casas</a>
+                    <ul class="navbar navbar-expand-lg navbar-light justify-content-center">
+                        <li>
+                            <a href="#" class="nav-link">Colonia</a>
+
+                            <ul>
+                                <li> <a href=" #maestros" class="nav-link"> Los Maestros</a> </li>
+                                <li> <a href="#palma" class="nav-link">Portales</a> </li>
+                                <li> <a href=" #pinos" class="">Los Pinos</a> </li>
+                                <li> <a href=" #fe" class="">Santa Fe</a> </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#chat" class="nav-link">Contactanos</a>
+
+                </nav>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="imagen-principal imagen-bg container-fluid"></div>
+
+    <section class="categorias container mt-4">
+        <a name="Servicio"></a>
+        <h2 class="text-center titulo">Servicio</h2>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-8 col-md-4 md-4 ">
+                <img src="~/imagen/Bloc-Galeria-Acabados-9-1.jpg" class="img-fluid">
+                <a href="" class=" text-center d-block">Casa pequeña</a>
+            </div>
+
+            <div class="col-8 col-md-4 md-4 ">
+                <img src="~/imagen/huf-haus-antonio-banderas-4b8a6a0e-2000x1333_5ab9081f_2000x1333.jpg" class="img-fluid">
+                <a href="" class=" text-center d-block">Casa grande</a>
+            </div>
+
+
+            <div class="col-8 col-md-4 md-4 ">
+                <img src="~/imagen/Arquitectura-moderna-8-1.jpg" class="img-fluid">
+                <a href="" class=" text-center d-block">Casa de dos pisos</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="container-fluid nosotros bg-primary">
+        <a name="quienessomos"></a>
+        <div class="row aling-items-center">
+            <div class="col-md-6 img-nosotros imagen-bg"></div>
+
+            <div class=" col-md-6 text-nosotros text-light">
+                <div class="contenido">
+                    <h2 class="mb-3 display-4 titulo text-center">Quiénes somos</h2>
+
+                    <p>
+                        Estimado Cliente:
+                        Somos una empresa de Bienes Raíces fundada en el año 2010, afiliada al AMPI (Asociación Mexicana de Profesionales Inmobiliarios) y contamos con un equipo especializado de profesionales inmobiliarios, donde te damos un servicio de atención personalizada y profesional, en la compra, venta y renta de inmuebles.
+                    </p>
+                    <p>Nos responsabilizamos de promover y vender su propiedad de forma segura y rentable, de encontrar la propiedad que llene todos sus requisitos, de negociar todos los aspectos del proceso de compra venta, realizamos análisis de mercado para lograr cuadros comparativos y así poder ofrecer una opinión de valor y determinar un precio competitivo de su propiedad en el mercado, verificamos que toda la documentación del inmueble esté completa y en orden, y nos aseguramos que todos los aspectos legales sean atendidos por nuestro grupo de abogados para obtener un cierre bien ejecutado</p>
+                    <p>VillaHogar, se caracteriza por ser una empresa que cuenta con profesionales inmobiliarios, además de contar con el apoyo de personal certificado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="container producto mt-4">
+        <h2 class="text-center titulo">Nuestras<span>Casas</span></h2>
+        <a name="nuestras"></a>
+        <div class="contenedor">
+            <main class="contenido-principal">
+                <img src="~/imagen/descarga (6).jpg" alt="Dome of the German Bundestag" class="contenido-principal__imagen">
+                <div class="contenido-principal__contenedor">
+                    <a name="palma"></a>
+                    <h1 class="contenido-principal__titulo ">Portales</h1>
+                    <p class="contenido-principal__resumen">
+                        Terreno 250m2 Construcción 414m2 3 niveles, cochera para 2 carros, 2 recámaras con baño vestidor, estancia, sala, comedor, cocina, cuarto de estudio, lavandería, cuarto de servicio. Equipada: cocina integral, climas, chimenea, aire central en área social, abanicos, persianas. Contry. Laura
+                    </p>
+                    <p class="font-weight-bold">$5,700,000</p>
+                    <a href="https://tour.metareal.com/apps/player?asset=6c58acb8-d24e-47fe-9dff-55cb668d777d&position=-5.75x1.62y-3.38z&rotation=9.36x-271.34y0.00z" class="btn btn-success mb-2 btn-lg text-uppercase font-weight-bold">Observar Casa</a>
+                </div>
+            </main>
+        </div>
+
+        <div class="contenedor">
+            <main class="contenido-principal">
+                <img src="~/imagen/descarga (5).jpg" alt="Dome of the German Bundestag" class="contenido-principal__imagen">
+                <div class="contenido-principal__contenedor">
+                    <a name="maestros"></a>
+                    <h1 class="contenido-principal__titulo">Los maestros</h1>
+                    <p class="contenido-principal__resumen">
+                        Terreno 851.5m2 Construcción 650m2 3 niveles, cochera para 6 autos, 4 recámaras con baño vestidor, ( una recámara en planta baja), estancia, sala, comedor, cocina con family room, lavandería, cuarto de servicio, acabados de lujo! incluye cocina integral, carpintería en vestidores, canceles y barandales de cristal templado, ventanas duo vent, alberca y palapa. Carretera Nacional. Rosy Mtz.
+                    </p>
+                    <p class="font-weight-bold">$18,500,000</p>
+                    <a href="https://tour.metareal.com/apps/player?asset=e852a194-97a8-45bc-b53d-68695f85605d&position=6.98x1.60y-3.39z&rotation=-7.64x341.01y0.00z" class="btn btn-success mb-2 btn-lg text-uppercase font-weight-bold">Observar Casa</a>
+                </div>
+            </main>
+        </div>
+
+        <div class="contenedor">
+            <main class="contenido-principal">
+                <img src="~/imagen/descarga (7).jpg" alt="Dome of the German Bundestag" class="contenido-principal__imagen">
+                <div class="contenido-principal__contenedor">
+                    <a name="pinos"></a>
+                    <h1 class="contenido-principal__titulo">Los Pinos</h1>
+                    <p class="contenido-principal__resumen">
+
+                        SIERRA ALTA 9VO SECTOR
+                        Terreno 761m2 Construcción 600m2 2 niveles, cochera para 3 autos, 5 recámaras con baño vestidor, estancia, sala, comedor, cocina, lavandería, cuarto de servicio, amplio jardín, acabos de lujo! Pisos de mármol, canceles y barandales de cristal templado, espejos, carpintería en vestidor de recámara principal, cisterna.
+                    </p>
+                    <p class="font-weight-bold">$16,000.00</p>
+                    <a href="https://tour.metareal.com/apps/player?asset=4d3f1192-fb93-4b49-a233-d2140a30a468&position=-10.58x1.73y-1.37z&rotation=0.00x0.00y0.00z" class="btn btn-success mb-2 btn-lg text-uppercase font-weight-bold">Observar Casa</a>
+                </div>
+            </main>
+        </div>
+
+        <div class="contenedor">
+            <main class="contenido-principal">
+                <img src="~/imagen/descarga (2).jpg" alt="Dome of the German Bundestag" class="contenido-principal__imagen">
+                <div class="contenido-principal__contenedor">
+                    <a name="fe"></a>
+                    <h1 class="contenido-principal__titulo">Santa Fe</h1>
+                    <p class="contenido-principal__resumen">
+                        Terreno. 308.31 m2 Construcción. 441.41 m2 2 niveles, cochera para 3 autos, sala, comedor, medio baño, cocina con hermosas vistas, 3 recámaras con baño vestidor, estancia, amplio jardín con área de asador, cuarto de servicio y lavandería. Acabados de lujo, excelente ubicación en esquina. Incluye: Cocina integral, carpintería en vestidores, ventanas duo vent con doble vibrio, placas en lavanetas de marmol, canceles y barandales de cristal templado en baños y sanitarios.
+                    </p>
+                    <p class="font-weight-bold">$16,000.00</p>
+                    <a href="https://tour.metareal.com/apps/player?asset=b2093a42-ce85-4b23-be4e-3547ee89975e&position=-2.18x1.73y-0.52z&rotation=-14.67x260.28y0.00z" class="btn btn-success mb-2 btn-lg text-uppercase font-weight-bold">Observar Casa</a>
+                </div>
+            </main>
+        </div>
+        <div>
+            <a name="chat"></a>
+            <a href="https://walink.co/d1f699" class="btn btn-success mb-2 btn-lg text-uppercase font-weight-bold">Da click y contactanos via WhatsApp</a>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

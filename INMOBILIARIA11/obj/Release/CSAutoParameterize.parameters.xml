@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Db_websiteEntities-Web.config Connection String" description="Db_websiteEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=SQL5097.site4now.net;Initial Catalog=DB_A68FC1_mariagonzalez51295;User Id=DB_A68FC1_mariagonzalez51295_admin;Password=lupita.12345  " tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Gonzalez\\Desktop\\INMOBILIARIAcopia\ -\ copia\ -\ copia\\INMOBILIARIA11\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Db_websiteEntities']/@connectionString" />
+  </parameter>
+</parameters>
