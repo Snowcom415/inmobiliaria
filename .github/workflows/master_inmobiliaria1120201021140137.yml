@@ -33,4 +33,4 @@ jobs:
         app-name: 'inmobiliaria1120201021140137'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_7e8b9a3b7da84f05aecdd3cd5d1575b7 }}
-        package: ./published/
+        package: /
